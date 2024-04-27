@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Course Selection</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    #heading{
+        text-align: center;
+    }
+    h1{
+        text-align: center;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+      color: #333;
+    }
+
+    .container {
+      background-color: #fff;
+      border-radius: 5px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      color: #007bff;
+      margin-bottom: 30px;
+    }
+
+    .btn-category {
+      margin-bottom: 10px;
+      background-color: #007bff;
+      border-color: #007bff;
+    }
+
+    .btn-category:hover {
+      background-color: #0056b3;
+      border-color: #0056b3;
+    }
+
+    .course-options {
+      display: none;
+      padding-left: 20px;
+      border-left: 2px solid #007bff;
+      margin-top: 5px;
+    }
+
+    .course-options label {
+      display: block;
+    }
+
+    .course-options input[type="checkbox"] {
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+    <h1><bold>Navsanjeevan Social Trust</bold></h2>
+    <div id="heading">
+        <p>Navsanjeevan Social Trust, located in Pune, is dedicated to skill development, women
+            empowerment, agriculture, and community development</p>
+    </div>
+    <div class="container mt-5">
+    <h2>Select Courses</h2>
+    <p>Choose from a variety of courses to enhance your skills and career prospects:</p>
+    <form id="courseForm">
+      <div class="form-group">
+        <button type="button" class="btn btn-secondary btn-category" onclick="toggleCourses('vocational')">Vocational Training</button><br>
+        <div id="vocationalCourses" class="course-options">
+          <input type="checkbox" name="vocationalTraining" value="Electrical Installation"> Electrical Installation<br>
+          <input type="checkbox" name="vocationalTraining" value="Plumbing"> Plumbing<br>
+          <input type="checkbox" name="vocationalTraining" value="Carpentry"> Carpentry<br>
+          <input type="checkbox" name="vocationalTraining" value="Automotive Repair"> Automotive Repair<br>
+          <input type="checkbox" name="vocationalTraining" value="Welding"> Welding<br>
+          <input type="checkbox" name="vocationalTraining" value="HVAC Technician"> HVAC Technician<br>
+          <input type="checkbox" name="vocationalTraining" value="Beauty and Hairdressing"> Beauty and Hairdressing<br>
+        </div>
+      </div>
+      <div class="form-group">
+        <button type="button" class="btn btn-secondary btn-category" onclick="toggleCourses('career')">Career Guidance</button><br>
+        <div id="careerCourses" class="course-options">
+          <input type="checkbox" name="careerGuidance" value="Resume Writing Workshops"> Resume Writing Workshops<br>
+          <input type="checkbox" name="careerGuidance" value="Interview Skills Training"> Interview Skills Training<br>
+          <input type="checkbox" name="careerGuidance" value="Personal Branding Seminars"> Personal Branding Seminars<br>
+          <input type="checkbox" name="careerGuidance" value="Networking Events"> Networking Events<br>
+          <input type="checkbox" name="careerGuidance" value="Job Shadowing Opportunities"> Job Shadowing Opportunities<br>
+          <input type="checkbox" name="careerGuidance" value="Mentorship Programs"> Mentorship Programs<br>
+        </div>
+      </div>
+      <div class="form-group">
+        <button type="button" class="btn btn-secondary btn-category" onclick="toggleCourses('women')">Women's Skill Empowerment</button><br>
+        <div id="womenCourses" class="course-options">
+          <input type="checkbox" name="womensSkillEmpowerment" value="Leadership Development Workshops"> Leadership Development Workshops<br>
+          <input type="checkbox" name="womensSkillEmpowerment" value="Financial Literacy Training"> Financial Literacy Training<br>
+          <input type="checkbox" name="womensSkillEmpowerment" value="Self-Defense Classes"> Self-Defense Classes<br>
+          <input type="checkbox" name="womensSkillEmpowerment" value="Entrepreneurship Training"> Entrepreneurship Training<br>
+          <input type="checkbox" name="womensSkillEmpowerment" value="Gender Equality Seminars"> Gender Equality Seminars<br>
+          <input type="checkbox" name="womensSkillEmpowerment" value="Health and Wellness Workshops"> Health and Wellness Workshops<br>
+        </div>
+      </div>
+      <div class="form-group">
+        <button type="button" class="btn btn-secondary btn-category" onclick="toggleCourses('agricultural')">Agricultural Training</button><br>
+        <div id="agriculturalCourses" class="course-options">
+          <input type="checkbox" name="agriculturalTraining" value="Sustainable Farming Practices"> Sustainable Farming Practices<br>
+          <input type="checkbox" name="agriculturalTraining" value="Crop Management"> Crop Management<br>
+          <input type="checkbox" name="agriculturalTraining" value="Livestock Management"> Livestock Management<br>
+          <input type="checkbox" name="agriculturalTraining" value="Agribusiness Training"> Agribusiness Training<br>
+          <input type="checkbox" name="agriculturalTraining" value="Organic Farming Techniques"> Organic Farming Techniques<br>
+          <input type="checkbox" name="agriculturalTraining" value="Irrigation Systems Management"> Irrigation Systems Management<br>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+  </div>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    function toggleCourses(category) {
+      var coursesDiv = document.getElementById(category + 'Courses');
+      if (coursesDiv.style.display === "none") {
+        coursesDiv.style.display = "block";
+      } else {
+        coursesDiv.style.display = "none";
+      }
+    }
+  </script>
+</body>
+</html>
